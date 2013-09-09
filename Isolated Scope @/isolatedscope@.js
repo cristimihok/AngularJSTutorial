@@ -9,7 +9,8 @@ myApp.directive("drink", function () {
 	return {
 		scope: {
 			flavor:"@" //takes the flavor attr and 
-					   //assigns it to the scope
+					   //assigns it to the scope.
+					   //It's expecting a string
 		},
 		template: '<div>{{flavor}}</div>',
 
