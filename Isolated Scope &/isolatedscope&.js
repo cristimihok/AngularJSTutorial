@@ -1,8 +1,8 @@
 var myApp = angular.module('phoneApp', []);
 
 myApp.controller("AppCtrl", function ($scope) {
-	$scope.callHome = function () {
-		alert("called home..");
+	$scope.callHome = function (message) {
+		alert('call ' + message);
 	}
 });
 
@@ -12,6 +12,7 @@ myApp.directive("phone", function () {
 			dial: "&" //dial = callHome()
 		},
 		//dial() = dial = callHome()
-		template: '<div ng-click="dial()">Call home!</div>'
+		template: '<input type="text" ng-model="value">' +
+			'<div ng-click="dial({message:value})">Call home!</div>'
 	}
 });
