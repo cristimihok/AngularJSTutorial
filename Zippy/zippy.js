@@ -2,6 +2,7 @@ var myApp = angular.module('myApp', []);
 
 myApp.directive("zippy", function () {
 	return {
+		//*
 		restrict: "E",
 		transclude: true,
 		scope: {
@@ -17,5 +18,6 @@ myApp.directive("zippy", function () {
 				scope.isContentVisible = !scope.isContentVisible;
 			}	
 		}
+		//*/
 	}
 })
